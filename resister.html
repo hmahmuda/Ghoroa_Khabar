@@ -1,0 +1,24 @@
+<!-- register.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register | Ghoroa Khabar</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="auth-page">
+  <div class="auth-box">
+    <h2 class="text-center">Register</h2>
+    <form action="register.php" method="POST">
+      <input type="text" name="name" placeholder="Your Name" class="input-responsive" required />
+      <input type="email" name="email" placeholder="Email" class="input-responsive" required />
+      <input type="password" name="password" placeholder="Password" class="input-responsive" required />
+      <input type="text" name="contact" placeholder="Phone Number" class="input-responsive" required />
+      <textarea name="address" placeholder="Your Address" class="input-responsive" required></textarea>
+      <input type="submit" value="Register" class="btn btn-primary" style="width:100%;" />
+    </form>
+    <p class="text-center" style="margin-top: 10px;">
+      Already registered? <a href="login.html">Log in here</a>
+    </p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="refresh" content="0; url=home.php" />
+    <title>Ghoroa Khabar - Authentic Bengali Food</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero-section h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero-section p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons {
+            margin-top: 30px;
+        }
+        
+        .cta-buttons a {
+            display: inline-block;
+            margin: 0 15px;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-primary {
+            background: #ff6b6b;
+            color: white;
+        }
+        
+        .cta-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .cta-primary:hover {
+            background: #ff5252;
+            transform: translateY(-2px);
+        }
+        
+        .cta-secondary:hover {
+            background: white;
+            color: #333;
+        }
+        
+        .features-section {
+            padding: 80px 0;
+            background: #f9f9f9;
+        }
+        
+        .feature-box {
+            text-align: center;
+            padding: 30px 20px;
+            margin-bottom: 30px;
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #ff6b6b;
+        }
+        
+        .feature-box h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .feature-box p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .popular-dishes {
+            padding: 80px 0;
+        }
+        
+        .dish-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+        
+        .dish-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .dish-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .dish-card-content {
+            padding: 20px;
+        }
+        
+        .dish-card h4 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .dish-price {
+            color: #ff6b6b;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+        
+        .order-btn {
+            background: #ff6b6b;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 25px;
+            display: inline-block;
+            transition: background 0.3s ease;
+        }
+        
+        .order-btn:hover {
+            background: #ff5252;
+        }
+        
+        .testimonials {
+            background: #2f3542;
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .testimonial-card {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #ff6b6b;
+        }
+        
+        .special-offer {
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .offer-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .offer-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        .offer-btn {
+            background: white;
+            color: #ff6b6b;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        
+        .offer-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        .stats-section {
+            background: #333;
+            color: white;
+            padding: 60px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #ff6b6b;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <section class="navbar">
+        <div class="container">
+            <div class="logo" style="display: flex; align-items: center;">
+                <a href="home.html" title="Ghoroa Khabar" style="display: flex; align-items: center; text-decoration: none;">
+                    <img src="images/logo.png" alt="Ghoroa Khabar Logo" class="img-responsive" style="width: 60px; height: auto; margin-right: 10px;">
+                    <span style="font-size: 1.8rem; font-weight: bold; color: #2f3542;">Ghoroa Khabar</span>
+                </a>
+            </div>
+
+            <div class="menu text-right">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="foods.php">Foods</a></li>
+                    <li><a href="login.html">Log In</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Welcome to Ghoroa Khabar</h1>
+            <p>Experience the authentic taste of Bengali cuisine, crafted with love and traditional recipes passed down through generations. From the royal kitchens of Bengal to your dining table.</p>
+            <div class="cta-buttons">
+                <a href="foods.php" class="cta-primary">Order Now</a>
+                <a href="categories.html" class="cta-secondary">Explore Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: 50px; font-size: 2.5rem; color: #333;">Why Choose Ghoroa Khabar?</h2>
+            
+            <div class="row">
+                <div class="col-3">
+                    <div class="feature-box">
+                        <div class="feature-icon">🍽️</div>
+                        <h3>Authentic Recipes</h3>
+                        <p>Every dish is prepared using traditional Bengali recipes and cooking methods, ensuring the authentic taste of Bengal.</p>
+                    </div>
+                </div>
+                
+                <div class="col-3">
+                    <div class="feature-box">
+                        <div class="feature-icon">🌿</div>
+                        <h3>Fresh Ingredients</h3>
+                        <p>We use only the freshest ingredients and spices, sourced locally to maintain the highest quality standards.</p>
+                    </div>
+                </div>
+                
+                <div class="col-3">
+                    <div class="feature-box">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Fast Delivery</h3>
+                        <p>Quick and reliable delivery service ensures your food reaches you hot and fresh, just like home-cooked meals.</p>
+                    </div>
+                </div>
+                
+                <div class="col-3">
+                    <div class="feature-box">
+                        <div class="feature-icon">👨‍🍳</div>
+                        <h3>Expert Chefs</h3>
+                        <p>Our experienced chefs specialize in Bengali cuisine, bringing years of expertise to create perfect dishes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Dishes Section -->
+    <section class="popular-dishes">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: 50px; font-size: 2.5rem; color: #333;">Our Most Popular Dishes</h2>
+            
+            <div class="row">
+                <div class="col-3">
+                    <div class="dish-card">
+                        <img src="images/ilish-mach.jpg" alt="Ilish Fry">
+                        <div class="dish-card-content">
+                            <h4>Ilish Fry</h4>
+                            <div class="dish-price">৳450</div>
+                            <p>The king of fish, crispy fried hilsa with traditional spices.</p>
+                            <a href="order.php?dish_id=1" class="order-btn">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-3">
+                    <div class="dish-card">
+                        <img src="images/gorur-mangsho.jpg" alt="Gorur Mangsho">
+                        <div class="dish-card-content">
+                            <h4>Gorur Mangsho</h4>
+                            <div class="dish-price">৳350</div>
+                            <p>Traditional beef curry with rich spices and authentic Bengali taste.</p>
+                            <a href="order.php?dish_id=1" class="order-btn">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-3">
+                    <div class="dish-card">
+                        <img src="images/khichuri.webp" alt="Bhuna Khichuri">
+                        <div class="dish-card-content">
+                            <h4>Bhuna Khichuri</h4>
+                            <div class="dish-price">৳180</div>
+                            <p>Comfort food! Traditional khichuri with dim bhaji & beguni.</p>
+                            <a href="order.php?dish_id=1" class="order-btn">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-3">
+                    <div class="dish-card">
+                        <img src="images/vorta.jpg" alt="Alu Vorta">
+                        <div class="dish-card-content">
+                            <h4>Alu Vorta</h4>
+                            <div class="dish-price">৳80</div>
+                            <p>Traditional mashed potato with mustard oil and spices.</p>
+                            <a href="order.php?dish_id=1" class="order-btn">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offer Section -->
+    <section class="special-offer">
+        <div class="container">
+            <div class="offer-content">
+                <h2>🎉 Special Offer!</h2>
+                <p>Get 20% off on your first order when you spend ৳500 or more!</p>
+                <p><strong>Use Code: WELCOME20</strong></p>
+                <a href="foods.php" class="offer-btn">Order Now & Save</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: 50px; font-size: 2.5rem;">What Our Customers Say</h2>
+            
+            <div class="row">
+                <div class="col-3">
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">"The Ilish Fry here tastes exactly like my grandmother used to make. Absolutely authentic Bengali taste!"</div>
+                        <div class="testimonial-author">- Rahim Khan</div>
+                    </div>
+                </div>
+                
+                <div class="col-3">
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">"Best Bengali restaurant in the city. The Gorur Mangsho is to die for!"</div>
+                        <div class="testimonial-author">- Priya Das</div>
+                    </div>
+                </div>
+                
+                <div class="col-3">
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">"Fast delivery and amazing food quality. The Khichuri is perfect comfort food!"</div>
+                        <div class="testimonial-author">- Ahmed Hassan</div>
+                    </div>
+                </div>
+                
+                <div class="col-3">
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">"Authentic Bengali vortas that remind me of home. Highly recommended!"</div>
+                        <div class="testimonial-author">- Meena Roy</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="stat-item">
+                        <span class="stat-number">5000+</span>
+                        <span class="stat-label">Happy Customers</span>
+                    </div>
+                </div>
+                
+                <div class="col-3">
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Authentic Dishes</span>
+                    </div>
+                </div>
+                
+                <div class="col-3">
+                    <div class="stat-item">
+                        <span class="stat-number">15</span>
+                        <span class="stat-label">Minutes Delivery</span>
+                    </div>
+                </div>
+                
+                <div class="col-3">
+                    <div class="stat-item">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Star Rating</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social + Footer -->
+    <section class="social">
+        <div class="container text-center">
+            <ul>
+                <li><a href="#"><img src="https://img.icons8.com/fluent/50/000000/facebook-new.png"/></a></li>
+                <li><a href="#"><img src="https://img.icons8.com/fluent/48/000000/instagram-new.png"/></a></li>
+                <li><a href="#"><img src="https://img.icons8.com/fluent/48/000000/twitter.png"/></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="container text-center">
+            <p>All rights reserved. Designed By <a href="#">Mahmuda</a></p>
+        </div>
+    </section>
+
+</body>
+</html>
